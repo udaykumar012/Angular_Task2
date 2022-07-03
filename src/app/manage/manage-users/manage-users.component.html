@@ -1,0 +1,47 @@
+<div width="80%" style="margin-left:10%; margin-right: 10%;">
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div *ngFor="let user of users">
+                    <div *ngIf="!user.isDeleted">
+                        <div class="card border-success" style="margin-bottom:10px">
+                            <div class="card-body">
+                                <h5 class="card-title">{{user.id}}</h5>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a class="btn btn-success " (click)="onSelect(user)">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div *ngIf="user.isDeleted">
+                        <div class="card border-danger" style="margin-bottom:10px">
+                            <div class="card-body">
+                                <h5 class="card-title">{{user.id}}</h5>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a class="btn btn-success " (click)="onSelect(user)">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div *ngIf="seluser" class="details">
+                    <h2>{{seluser.firstName | uppercase}} Details</h2>
+                    <div [className]="seluser.isDeleted==false?'act':'not_act'"> {{seluser.isDeleted == false? 'Active':'Deleted'}}</div>
+                    <div>id: {{seluser.id}}</div>
+                    <div>First Name :{{seluser.firstName}}</div>
+                    <div>Last Name :{{seluser.lastName}}</div>
+                    <div> Age :{{seluser.age}}</div>
+    
+                   
+                  </div>
+    
+            </div>
+
+        </div>

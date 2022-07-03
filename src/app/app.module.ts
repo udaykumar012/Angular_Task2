@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ActiveModule } from './active/active.module';
+import { AppRoutingModule, routingcomponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { DeletedModule } from './deleted/deleted.module';
+import { ManageModule } from './manage/manage.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingcomponents
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    ActiveModule,
+    DeletedModule,
+    ManageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
