@@ -16,8 +16,7 @@ import { ManageModule } from './manage/manage.module';
     BrowserModule,
     AppRoutingModule,
     ActiveModule,
-    DeletedModule,
-    ManageModule
+    DeletedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
