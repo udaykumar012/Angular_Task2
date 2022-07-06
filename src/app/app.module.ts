@@ -5,7 +5,7 @@ import { AppRoutingModule, routingcomponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DeletedModule } from './deleted/deleted.module';
-import { ManageModule } from './manage/manage.module';
+
 
 @NgModule({
   declarations: [
